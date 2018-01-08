@@ -1,0 +1,26 @@
+<h2>Listing Manufacturers</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for manufacturer <- @manufacturers do %>
+    <tr>
+      <td><%= manufacturer.name %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: manufacturer_path(@conn, :show, manufacturer), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: manufacturer_path(@conn, :edit, manufacturer), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: manufacturer_path(@conn, :delete, manufacturer), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Manufacturer", to: manufacturer_path(@conn, :new) %></span>

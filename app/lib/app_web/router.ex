@@ -18,6 +18,7 @@ defmodule AppWeb.Router do
 
     get "/", PageController, :index
     resources "/categories", CategoryController
+    resources "/manufacturers", ManufacturerController
   end
 
   # Other scopes may use custom stacks.

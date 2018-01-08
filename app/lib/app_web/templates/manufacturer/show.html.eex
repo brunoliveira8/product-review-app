@@ -1,0 +1,13 @@
+<h2>Show Manufacturer</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @manufacturer.name %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: manufacturer_path(@conn, :edit, @manufacturer) %></span>
+<span><%= link "Back", to: manufacturer_path(@conn, :index) %></span>
